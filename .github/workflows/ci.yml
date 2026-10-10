@@ -1,0 +1,27 @@
+name: Automated Code Testing
+
+on: 
+  push: # Starts the workflow when code is pushed
+  pull_request: # Also runs checks when a pull request is opened or updated
+
+jobs: # Defines the tasks GitHub must execute
+  test:
+    runs-on: ubuntu-latest # Selects an Ubuntu Linux computer to run the tasks
+
+    steps: # Lists the instructions to execute in order
+      - name: Get project code
+        uses: actions/checkout@v4 # Downloads your repository's code onto the runner
+
+      - name: Set up Python
+        uses: actions/setup-python@v5 # Installs and selects Python 3.12
+        with:
+          python-version: "3.12"
+
+      - name: Install pytest
+        run: python -m pip install pytest  # Installs the testing tool on the runner
+
+      - name: Run automated tests
+        run: python -m pytest -v  # Runs your automated tests and displays their results
+
+
+# A workflow is the set of instructions in this file. The runner is the computer executing those instructions.
