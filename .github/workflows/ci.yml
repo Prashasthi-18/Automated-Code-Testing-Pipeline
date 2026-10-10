@@ -23,8 +23,8 @@ jobs: # Defines the tasks GitHub must execute
       - name: Run Ruff lint check
         run: python -m ruff check .
 
-      - name: Run automated tests
-        run: python -m pytest -v  # Runs your automated tests and displays their results
+      - name: Run tests with coverage
+  run: python -m pytest --cov=app --cov-report=term-missing -v
 
 
 # A workflow is the set of instructions in this file. The runner is the computer executing those instructions.
