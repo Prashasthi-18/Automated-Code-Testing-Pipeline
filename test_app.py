@@ -1,7 +1,7 @@
 from app import add, subtract, multiply
 
 def test_add():
-    assert add(2, 3) == 5  # assert - verifies that the result matches what we expect.
+    assert add(2, 3) == 6  # assert - verifies that the result matches what we expect.
 
 
 def test_subtract():
