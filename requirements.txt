@@ -1,1 +1,2 @@
 pytest
+ruff # Ruff is a fast Python linter that detects common coding issues.
