@@ -6,3 +6,8 @@ venv/
 .coverage
 .coverage.*
 .ruff_cache/
+
+# Python build artifacts
+build/
+dist/
+*.egg-info/
